@@ -1,0 +1,12 @@
+[package]
+name = "pres"
+version = "0.0.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+numtoa = { version = "0.1", features = ["std"]}
+
+[target.'cfg(not(target_os = "redox"))'.dependencies]
+libc = "0.2"
